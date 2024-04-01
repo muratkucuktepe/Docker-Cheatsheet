@@ -41,6 +41,7 @@ docker rm <container-id-or-name> <container-id-or-name> etc.   // Remove multipl
 docker rmi <image-id-or-name>                                  // Remove one image
 docker rmi <image-id-or-name> <image-id-or-name> etc.          // Remove multiple images at once
 docker image prune                                             // Remove all unused images
+docker image prune -a                                          // Remove all unused images including names and tags
 docker run -p 3000:80 -d -rm <image-id-or-name>                // Automatically removes container if it exits. rm means remove
 ```
 ---
@@ -60,4 +61,22 @@ docker start -a -i <container-id-or-name>   // Starts in attached and interactiv
 ```
 docker logs <container-id-or-name>      // Displays past logs
 docker logs -f <container-id-or-name>   // Display logs and keep listening logs for future logs. f means follow
+```
+---
+**- Inspecting images**
+```
+docker image inspect <image-id-or-name>
+```
+---
+**- Copying files from & into containers**
+```
+docker cp <source-directory> <container-name>:<destination-directory>
+// Ex: docker cp dummy/. boring_vaughan:/test   // Copy from the folder dummy everything into container boring_vaughan into test folder.
+// Ex: docker cp boring_vaughan:/test dummy     // Copy from the container into dummy folder.
+```
+---
+**- Tagging and naming containers and images**
+```
+docker run -p 3000:80 -d -rm --name myCustomName <image-id-or-name>   // Naming a container
+docker build -t nameOfTheImage:customTag                              // Naming and tagging an image
 ```
