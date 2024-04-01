@@ -80,3 +80,21 @@ docker cp <source-directory> <container-name>:<destination-directory>
 docker run -p 3000:80 -d -rm --name myCustomName <image-id-or-name>   // Naming a container
 docker build -t nameOfTheImage:customTag                              // Naming and tagging an image
 ```
+---
+**- Renaming images**
+```
+docker tag <old-name> <new-name>   // Rename an image. This does NOT delete old one. It creates a clone.
+// Ex: docker tag node-demo:latest myDockerHubAccount/myCustomImage 
+```
+---
+**- Logging in and out**
+```
+docker login   // This asks username and password afterwards.
+docker logout 
+```
+**- Pulling and pushing images**
+```
+docker push imageName/imageTag
+docker pull imageName/imageTag   // This pulls always latest
+docker run imageName/imageTag    // This pull automatically if the image is not available locally.
+```
