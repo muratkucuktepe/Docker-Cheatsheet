@@ -29,7 +29,7 @@ docker stop <container-id-or-name>   // Stop a running container.
 ```
 docker run -p 8000:80 -d <image-id-or-name>       // Run the container in detached mode. d means detached.
 docker container attach <container-id-or-name>    // Attach yourself to a detached container again
-docker attach <image-id-or-name>                  // Attach yourself to a detached container again
+docker attach <container-id-or-name>              // Attach yourself to a detached container again
 docker start -a <container-id-or-name>            // Start the container in attached mode. a means attached
 ```
 ---
@@ -41,6 +41,7 @@ docker rm <container-id-or-name> <container-id-or-name> etc.   // Remove multipl
 docker rmi <image-id-or-name>                                  // Remove one image
 docker rmi <image-id-or-name> <image-id-or-name> etc.          // Remove multiple images at once
 docker image prune                                             // Remove all unused images
+docker run -p 3000:80 -d -rm <image-id-or-name>                // Automatically removes container if it exits. rm means remove
 ```
 ---
 **- Interactive run**
