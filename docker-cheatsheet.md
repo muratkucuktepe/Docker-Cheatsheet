@@ -37,6 +37,7 @@ docker start -a <container-id-or-name>            // Start the container in atta
 ```
 docker system prune      // Removes unused containers, networks, and dangling images (images built but not referenced by any containers).
 docker rm <container-id-or-name>                               // Remove one container
+docker rm <container-id-or-name> -f                            // Remove a container with force. f means force
 docker rm <container-id-or-name> <container-id-or-name> etc.   // Remove multiple containers at once
 docker rmi <image-id-or-name>                                  // Remove one image
 docker rmi <image-id-or-name> <image-id-or-name> etc.          // Remove multiple images at once
