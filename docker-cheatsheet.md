@@ -93,9 +93,17 @@ docker tag <old-name> <new-name>   // Rename an image. This does NOT delete old 
 docker login   // This asks username and password afterwards.
 docker logout 
 ```
+---
 **- Pulling and pushing images**
 ```
 docker push imageName/imageTag
 docker pull imageName/imageTag   // This pulls always latest
 docker run imageName/imageTag    // This pull automatically if the image is not available locally.
+```
+---
+**- Volumes**
+```
+docker volume ls                 // Listing all volumes
+docker volume rm <volume-name>   // 1. Way: Clear unused anonymous volumes   
+docker volume prune              // 2. Way: Clear unused anonymous volumes
 ```
