@@ -107,3 +107,9 @@ docker volume ls                 // Listing all volumes
 docker volume rm <volume-name>   // 1. Way: Clear unused anonymous volumes   
 docker volume prune              // 2. Way: Clear unused anonymous volumes
 ```
+```
+// Summary
+docker run -v app/data...                  // Anonymous volume
+docker run -v data:/app/data...            // Named volume
+docker run -v /path/to/code:/app/code...   // Bind mounts
+```
