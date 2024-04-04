@@ -103,15 +103,20 @@ docker run imageName/imageTag    // This pull automatically if the image is not 
 ---
 **- Volumes**
 ```
-docker volume ls                 // Listing all volumes
-docker volume rm <volume-name>   // 1. Way: Clear unused anonymous volumes   
-docker volume prune              // 2. Way: Clear unused anonymous volumes
+docker volume ls                      // Listing all volumes
+docker volume rm <volume-name>        // 1. Way: Clear unused anonymous volumes   
+docker volume prune                   // 2. Way: Clear unused anonymous volumes
+docker volume create <volume-name>    // Create a named volume
+docker volume inspect <volume-name>   // Inspecting a volume
+docker volume rm <volume-name>        // Remove a volume. If it is used in a container, you can not remove it. Removing volume removes data as well.
+docker volume prune                   // Removes unused volumes
 ```
 ```
 // Summary
 docker run -v app/data...                  // Anonymous volume
 docker run -v data:/app/data...            // Named volume
 docker run -v /path/to/code:/app/code...   // Bind mounts
+```
 ```
 // READ-ONLY volumes
 // By default volumes are read and write
