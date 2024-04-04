@@ -113,3 +113,8 @@ docker run -v app/data...                  // Anonymous volume
 docker run -v data:/app/data...            // Named volume
 docker run -v /path/to/code:/app/code...   // Bind mounts
 ```
+// READ-ONLY volumes
+// By default volumes are read and write
+// This means container can not change your source code in your IDE
+docker run -v /path/to/code:/app/code:ro   // Bind mounts into read only
+```
