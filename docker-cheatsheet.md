@@ -123,3 +123,8 @@ docker run -v /path/to/code:/app/code...   // Bind mounts
 // This means container can not change your source code in your IDE
 docker run -v /path/to/code:/app/code:ro   // Bind mounts into read only
 ```
+---
+**- History**
+```
+docker history <image>   // Do not use passwords in Dockerfile otherwise it can be reached by using this command
+```
