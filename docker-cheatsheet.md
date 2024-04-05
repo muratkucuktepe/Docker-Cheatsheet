@@ -130,6 +130,8 @@ docker history <image>   // Do not use passwords in Dockerfile otherwise it can 
 ```
 **- Network**
 ```
-docker run --network <network-name>   // Put the container into a network with this flag
+docker run --network <network-name>        // Put the container into a network with this flag
+docker network create <new-network-name>   // Create a new network
+docker network ls                          // List all existing networks
 ```
 
