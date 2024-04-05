@@ -128,3 +128,8 @@ docker run -v /path/to/code:/app/code:ro   // Bind mounts into read only
 ```
 docker history <image>   // Do not use passwords in Dockerfile otherwise it can be reached by using this command
 ```
+**- Network**
+```
+docker run --network <network-name>   // Put the container into a network with this flag
+```
+
